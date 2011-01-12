@@ -1,5 +1,6 @@
 require 'spree_core'
 require 'spree_comments_hooks'
+require 'acts_as_commentable'
 
 module SpreeComments
   class Engine < Rails::Engine
