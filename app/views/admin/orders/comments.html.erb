@@ -1,3 +1,2 @@
-<%= @order = Order.find_by_number(params[:id]) %>
-<%= render "admin/shared/order_tabs", :locals => {:current => "Comments", :order => @order}  %>
+<%= render "admin/shared/order_tabs", :current => "Comments" %>
 <%= render "admin/shared/comments", :commentable => @order %>

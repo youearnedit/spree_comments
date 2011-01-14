@@ -14,7 +14,7 @@
 <table class="index">
   <thead>
     <tr>
-    <% hook :admin_comment_types_index_headers do %>
+    <%= hook :admin_comment_types_index_headers do %>
       <th><%= t("name") %></th>
       <th><%= t("applies_to") %></th>
     <% end %>
@@ -27,7 +27,7 @@
     <% @comment_types.each do |comment_type| %>
       <tr id="<%= dom_id comment_type %>">
         <%- locals = {:comment_type => comment_type} -%>
-        <% hook :admin_comment_types_index_rows, locals do %>
+        <%= hook :admin_comment_types_index_rows, locals do %>
           <td><%= comment_type.name %></td>
           <td><%= comment_type.applies_to %></td>
         <% end %>
