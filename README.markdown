@@ -15,24 +15,28 @@ Requirements:
 
 Notes:
 
-* Comments are read-only.  You cannot edit or remove them from the Admin UI.
+* Comments are create-only.  You cannot edit or remove them from the Admin UI.
 
-* Comment model and migration are included in the gem.  You do NOT need to follow the
-acts\_as\_commentable instructions for script/generate comment
+Installation
+------------
 
-## Installation
+Add the following to your Gemfile
 
-1. Add the following to your Gemfile
-  gem "spree_comments"
-  gem "acts_as_commentable"
+    gem "spree_comments"
+    gem "acts_as_commentable"
 
-2. Run `bundle install`
+Run: 
+  
+    bundle install
 
-3. Copy over migrations via the rake task:
-  rake spree_comments:install
+Copy over migrations via the rake task:
 
-4. Run the migrations: `rake db:migrate`
+    rake spree_comments:install
 
-5. Start your server: `script/rails s`
+Run the migrations:
 
+    rake db:migrate
 
+Start your server: 
+
+    rails s
