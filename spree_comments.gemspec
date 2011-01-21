@@ -8,12 +8,11 @@ Gem::Specification.new do |s|
   s.email     = 'gems@railsdog.com'
   s.required_ruby_version = '>= 1.8.7'
 
-  s.files     = Dir['CHANGELOG', 'README.md', 'LICENSE', 'lib/**/*', 'app/**/*']
-  s.require_path = 'lib'
-  s.requirements << 'none'
-
-  s.has_rdoc  = true
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.require_paths = ["lib"]  
+  s.has_rdoc      = false
 
   s.add_dependency('spree_core', '>=0.30.0')
-  s.add_dependency('acts_as_commentable')
+  s.add_dependency('acts_as_commentable', '3.0.0')
 end
