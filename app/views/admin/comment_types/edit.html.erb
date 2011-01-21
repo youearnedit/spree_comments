@@ -2,7 +2,7 @@
 
 <%= hook :admin_comment_type_edit_form_header do %>
   <h1><%= t("editing_comment_type") %></h1>
-  <%= error_messages_for :comment_type %>
+  <%= render "shared/error_messages", :target => @comment_type %>
 <% end %>
 
 <%= hook :admin_comment_type_edit_form do %>

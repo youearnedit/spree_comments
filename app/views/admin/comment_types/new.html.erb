@@ -6,7 +6,6 @@
   <%= render "shared/error_messages", :target => @comment_type %>
 <% end %>
 
-<h1> Hi, Steven</h1>
 <%= hook :admin_comment_type_new_form do %>
   <%= form_for(:comment_type, :url => collection_url) do |f| %>
     <%= render :partial => "form", :locals => { :f => f } %>
