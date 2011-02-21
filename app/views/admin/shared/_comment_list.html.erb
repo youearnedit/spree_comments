@@ -17,7 +17,7 @@
           <strong><%= comment.user.email + ' ' + I18n::t('said')%> :</strong>
         </div>
         <div id="order-comment-body-<%= index %>" class="order-comment-body">
-          <%= comment.comment %>
+          <%= comment.comment.html_safe %>
         </div>
       </td>
     </tr>
