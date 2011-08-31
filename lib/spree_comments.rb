@@ -7,31 +7,12 @@ module SpreeComments
 
     config.autoload_paths += %W(#{config.root}/lib)
 
-	  def self.activate
-	    Order.class_eval do
-	      acts_as_commentable
-	    end
-	
-	    Shipment.class_eval do
-	      acts_as_commentable
-	    end
-	
-	    Admin::OrdersController.class_eval do
-	      def comments
-	        load_order
-	        @comment_types = CommentType.where(:applies_to => "Order")
-	      end
-	    end
-	
-	    Admin::ShipmentsController.class_eval do
-	      def comments
-	        load_shipment
-	        @comment_types = CommentType.where(:applies_to => "Shipment")
-	      end
-	    end
-	
-	  end
+    def self.activate
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
+        Rails.env.production? ? require(c) : load(c)
+      end
+    end
 
-    config.to_prepare  &method(:activate).to_proc
-	end
+    config.to_prepare &method(:activate).to_proc
+  end
 end
