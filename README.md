@@ -1,4 +1,5 @@
-# Spree Comments
+Spree Comments
+==============
 
 Spree Comments is an extension for Spree to allow commenting on different models via the
 admin ui and currently supports Orders & Shipments.
@@ -25,17 +26,17 @@ Add the following to your Gemfile
     gem "spree_comments"
     gem "acts_as_commentable"
 
-Run: 
-  
+Run:
+
     bundle install
 
 Copy over migrations via the rake task:
 
-    rake spree_comments:install
+    bundle exec rake railties:install:migrations FROM=spree_comments
 
 Run the migrations:
 
-    rake db:migrate
+    bundle exec rake db:migrate
 
 Start your server: 
 

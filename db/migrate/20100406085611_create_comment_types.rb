@@ -3,6 +3,7 @@ class CreateCommentTypes < ActiveRecord::Migration
     create_table :comment_types do |t|
       t.string :name
       t.string :applies_to
+
       t.timestamps
     end
   end
