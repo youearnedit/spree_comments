@@ -3,3 +3,4 @@
 "0.60.x" => { :branch => "0-60-x" }
 "0.70.x" => { :ref => "a33693ffaeb60fc8bcde6c805c9659ff4b7e2bd6" }
 "1.0.x" => { :branch => "master" }
+"1.1.x" => { :branch => "master" }
