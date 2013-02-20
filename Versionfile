@@ -2,5 +2,6 @@
 "0.30.x" => { :branch => "0-30-x" }
 "0.60.x" => { :branch => "0-60-x" }
 "0.70.x" => { :ref => "a33693ffaeb60fc8bcde6c805c9659ff4b7e2bd6" }
-"1.0.x" => { :branch => "master" }
-"1.1.x" => { :branch => "master" }
+"1.0.x" => { :ref => "44a2d48b6f0cb0877f524ac72ab6a34f91159895" }
+"1.1.x" => { :ref => "44a2d48b6f0cb0877f524ac72ab6a34f91159895" }
+"1.2.x" => { :branch => "master" }
