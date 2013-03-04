@@ -23,19 +23,14 @@ Add the following to your Gemfile (or check Versionfile for Spree versions requi
 
 Run:
 
-    bundle install
+```shell
+bundle install
+bundle exec rails g spree_comments:install
+```
 
-Copy over migrations via the rake task:
-
-    bundle exec rake spree_comments:install:migrations
-
-Run the migrations
+Run the migrations if you did not during the installation generator:
 
     bundle exec rake db:migrate
-
-Or you can also run them together and save a little loading time
-
-    bundle exec rake spree_comments:install:migrations db:migrate
 
 Start your server: 
 
